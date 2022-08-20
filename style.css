@@ -1,21 +1,118 @@
-.top-header{
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,300;1,800&display=swap');
+    .top-header {
         position: relative;
         max-height: 100% !important;
-        padding-top: 55px;
-
+        padding-top: 0;
     }
     .top-header:before {
-        content: "PAYENT PENDING";
+        content: "PAYENT PENDING"; 
         position: absolute;
         left: 0;
         right: 0;
         margin: 0 auto;
-        top: 20px;
+        top: -57px;
         font-family: Work Sans;
-font-size: 38px;
-font-weight: 900;
-line-height: 45px;
-letter-spacing: 0.1em;
-text-align: center;
-color: #0C2C94;
-      }
+        font-size: 38px;
+        font-weight: 900;
+        line-height: 45px;
+        letter-spacing: 0.1em;
+        text-align: center;
+        color: #0C2C94;
+    }
+    .modal-content {
+        box-shadow: none;
+        background: #fff;
+        z-index: 999999;
+        border-radius: 0;
+        margin-top: 110px;
+        border: 2px solid #0C2C94 !important;
+        border-radius: 7px;
+    }
+    .top-header .close-icon {
+        color: #8f979e;
+        position: absolute;
+        top: -109px;
+        width: 206px;
+        display: flex;
+        justify-content: flex-end;
+        padding: 0;
+        color: #0C2C94;
+        padding-right: 10px;
+        border-radius: 5px;
+        border: 2px solid #0C2C94;
+    }
+    .close-icon.close-action:before {
+        content: "CANCEL PAYMENT AND RESTART";
+        position: absolute;
+        left: auto;
+        right: 35px;
+        font-family: Work Sans;
+        font-size: 10px;
+        font-weight: 300;
+        line-height: 9px;
+        letter-spacing: 0em;
+        text-align: left;
+        top: 7px;
+        color: #0C2C94;
+    }
+      @media (min-width: 576px){
+        .modal-dialog {
+            width: 461px;
+            background: #fff;
+            padding: 13px 32px 40px;
+        }
+
+     }
+     .modal-dialog.open {
+        position: relative;
+        border-radius: 12px;
+    }
+    
+    .modal-dialog.open > div:nth-child(2) {
+        position: relative;
+        height: 96px;
+        margin-top: 14px !important;
+        border-radius: 13px;
+    }
+    
+    .modal-dialog.open > div:nth-child(2):before {
+        content: "The number shown above (below “Pay with”) is the exact amount in BTC you need to send. Copy this number exactly. Then copy the BTC address (either scan QR code or go to “copy” tab and copy the second address). This is the exact address you will send the BTC to. This invoice expires every 30 minutes. Do not exit out of this page and then send the money. You must leave this page open when sending the money. The site will automatically detect and tell you when the payment is confirmed. If the site does not indicate payment was confirmed within 20 minutes, there is an issue.  If you experience any issues, contact support imediately and supply  all transaction information, including the block number, your wallet address and any other information that can assist us.";
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        height: 100%;
+        width: 100%;
+        font-family: Work Sans;
+        font-size: 7px;
+        font-weight: 600;
+        line-height: 9px;
+        letter-spacing: 0em;
+        text-align: center;
+        font-family: Work Sans;
+        font-size: 10px;
+        font-weight: 500;
+        line-height: 9px;
+        letter-spacing: 0em;
+        text-align: center;
+        padding: 5px;
+        top: 0;
+        border: 2px solid #0C2C94;
+        border-radius: 7px;
+    }
+    #prettydropdown-DefaultLang {
+        display: none !important;
+    }
+    .powered__by__btcpayserver {
+        display: none !important;
+    }
+    button.action-button.close-action > span {
+        opacity: 0 !important;
+    }
+    button.action-button.close-action:before {
+        content: "Back to Home";
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
